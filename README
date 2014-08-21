@@ -1,0 +1,25 @@
+--- STARTUP ---
+
+python manage.py syncdb --noinput
+python manage.py createsuperuser
+python manage.py runserver
+
+--- SEE THE PROBLEM WITH AN INT FIELD ---
+1) open your favorite browser
+2) navigate to http://127.0.0.1:8000/admin/custom_int_field/fooint/add/
+3) press "save"
+4) navigate to http://127.0.0.1:8000/admin/custom_int_field/barint/add/
+5) select the fooint for "id", "fk" and "m2m" input
+6) press "save and continue editing"
+7) notice none of your selections are shown by the admin
+8) verify with your favorite sql browser that your choices were actually stored in the database
+
+--- SEE THE PROBLEM WITH A CHAR FIELD ---
+1) open your favorite browser
+2) navigate to http://127.0.0.1:8000/admin/custom_str_field/foostr/add/
+3) press "save"
+4) navigate to http://127.0.0.1:8000/admin/custom_str_field/barstr/add/
+5) select the foostr for "id", "fk" and "m2m" input
+6) press "save and continue editing"
+7) notice none of your selections are shown by the admin
+8) verify with your favorite sql browser that your choices were actually stored in the database
