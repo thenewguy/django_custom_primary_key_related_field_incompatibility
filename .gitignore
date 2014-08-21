@@ -1,0 +1,3 @@
+*.pyc
+/django_custom_primary_key_related_field_incompatibility/commands.txt
+/django_custom_primary_key_related_field_incompatibility/db.sqlite3
